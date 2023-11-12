@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Blush</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style1.css">
+    
+  <style>
+    /* *{
+      /* font-family: 'Roboto', sans-serif; 
+    margin:0; padding:0;
+    font-size: medium;
+    outline: none;
+     border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    } */
+    
+.header{
+    background:#80008064 ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0.6rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+}
+/* 
+.header .logo img{
+    height: 6rem;
+    
+} */
+
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 1.6rem;
+    color:#fff;
+    
+        /* font-size: 14px;
+        font-weight: 600;
+        border-radius: 25px;
+        padding: 7px 10px; 
+         margin-bottom: 20px; 
+        width: 35%;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #333;
+        text-decoration: none;
+        box-shadow: 0 0.5rem 1.2rem rgb(0 0 0 / 10%), 0 2rem 3rem rgb(0 0 0 / 15%) !important;
+     */
+}
+.header .logobu{
+    height: 6rem;
+    color:var(--main-color);
+}
+
+.header .navbar a:hover{
+    color:var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+    .dialog {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dialog-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 900px; 
+  max-height: 600px; /* increase the max-height value */
+}
+
+.dialog-content img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+
+  </style>
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+  <a href="#" class="logobu">
+    <img src="images/logo1.png" alt=""class="logobu">
+   
+</a> 
+
+    <nav class="navbar">
+        <a href="#" onclick="openDialog()">Beauty Tips</a>
+        <a href="Login and Signup Form with Email Verification - PHP/login-user.php">Login</a>
+        <a href="Login and Signup Form with Email Verification - PHP/signup-user.php">Sign Up</a>
+        <a href="admin/index.php">Admin</a>
+        
+       
+    </nav>
+
+    <div id="dialog" class="dialog">
+        <div class="dialog-content">
+          <span class="close" onclick="closeDialog()">&times;</span>
+          <h2 id="tip-title"></h2>
+          <img id="tip-image" src="" alt="">
+          <p id="tip-text"></p>
+        </div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        
+ 
+    </div>
+</section>
+
+<script>
+    function openDialog() {
+      // get a random beauty tip from the tips array
+      var tips = [
+        
+        {
+    title: "Sunscreen",
+    image:  "tipsimages/4.jpg",
+    text: "Use sunscreen every day to protect your skin from sun damage"
+  },
+  {
+    title: "Exfoliation",
+    image:"tipsimages/2.jpg",
+    text: "Exfoliate your skin once a week to remove dead skin cells"
+  },
+  {
+    title: "Hydration",
+    image:"tipsimages/3.jpg",
+    text: "Drink plenty of water to keep your skin hydrated"
+  },
+  {
+    title: "Moisturization",
+    image: "tipsimages/1.jpg",
+    text: "Apply a moisturizer daily to keep your skin soft and supple"
+  },
+  {
+    title: "Hot Water",
+    image: "tipsimages/22.jpg",
+    text: "Avoid using hot water when washing your face to prevent dryness"
+  },
+  {
+    title: "Sleep",
+    image: "tipsimages/6.jpg",
+    text: "Get enough sleep to reduce under-eye circles and puffiness"
+  },
+  {
+    title: "Cleanser",
+    image: "tipsimages/14.jpg",
+    text: "Use a gentle cleanser to remove makeup and impurities"
+  },
+  {
+    title: "Diet",
+    image: "tipsimages/8.jpg",
+    text: "Eat a healthy diet to nourish your skin from the inside out"
+  }, {
+    title: "Sunscreen",
+    image:  "tipsimages/1.jpg",
+    text: "Use sunscreen every day to protect your skin from sun damage"
+  },
+  {
+    title: "Oats",
+    image: "tipsimages/8.jpg",
+    text: "Oats work as an efficient anti-tanning agent and helps lighten the skin tone. They are amazing exfoliators.Oats help to absorb the excess oil on the skin and are an essential part of acne treatments."
+  },
+{
+    title: "Concealer",
+    image: "tipsimages/9.jpg",
+    text: "Everyone's under eye issues are different, so be sure to take your skin concerns into consideration and pick the best concealer for the job."
+  },
+{
+    title: "Blush",
+    image: "tipsimages/10.jpg",
+    text: "Blush can make your skin look radiant, but if you're using the wrong color, it can actually clash with your complexion."
+  },
+{
+    title: "Blush",
+    image: "tipsimages/11.jpg",
+    text: "Understanding which type of blush you need can help you get the perfect results for your face."
+  },
+{
+    title: "Diet",
+    image: "tipsimages/12.jpg",
+    text: "Eat a healthy diet to nourish your skin from the inside out"
+  },
+{
+    title: "Mascara",
+    image: "tipsimages/13.jpg",
+    text: "Gently pressing your mascara against the underside of your lashes gives them a fuller, darker look — almost like eyeliner, but more natural."
+  },
+{
+    title: "Perfume",
+    image: "tipsimages/14.jpg",
+    text: "Don’t rub wrists together to apply perfume (it makes it wear off faster). Instead, press together."
+  },
+{
+    title: "Icing",
+    image: "tipsimages/15.jpg",
+    text: " Ice can help your skin glow instantly, reduce puffiness around your eyes and soothe acne."
+  },
+{
+    title: "Honey",
+    image: "tipsimages/16.jpg",
+    text: "Consuming two to three tablespoons of honey and lemon with lukewarm water can prove to be beneficial to the skin."
+  },
+{
+    title: "Mask",
+    image: "tipsimages/17.jpg",
+    text: "Keeping in mind the new normal, don’t forget to wash your mask every time you wear one."
+  },
+{
+    title: "Lipbalm",
+    image: "tipsimages/18.jpg",
+    text: "Never forget to pack your SPF and lip balm wherever you go. They will ALWAYS come handy. (Thank us later!)"
+  },
+{
+    title: "Pillowcase",
+    image: "tipsimages/19.jpg",
+    text: "Make sure that your pillowcases are clean and changed every week. A silk pillowcase can decrease friction between the pillow and your face and hence reduce the chances of acne."
+  },
+{
+    title: "MakeupRemoval",
+    image: "tipsimages/20.jpg",
+    text: "Use a cleansing balm and a washcloth to remove makeup. Experts agree that this technique is more effective than makeup wipes."
+  },
+{
+    title: "Massage",
+    image: "tipsimages/21.jpg",
+    text: "A face massage or face roller can help depuff your skin. A massaging tool can increase blood flow, leaving you looking awake and fresh."
+  },
+{
+    title: "FaceWash",
+    image: "tipsimages/22.jpg",
+    text: "Hot water is too intense for your face. Use lukewarm or cool water, and avoid washing your face in the shower unless you turn down the temp."
+  }
+      ];
+      var randomTip = tips[Math.floor(Math.random() * tips.length)];
+    
+      // set the dialog box content
+      document.getElementById("tip-title").innerHTML = randomTip.title;
+      document.getElementById("tip-image").src = randomTip.image;
+      document.getElementById("tip-text").innerHTML = randomTip.text;
+    
+      // show the dialog box
+      document.getElementById("dialog").style.display = "block";
+    }
+    
+    function closeDialog() {
+      // hide the dialog box
+      document.getElementById("dialog").style.display = "none";
+    }
+    // function page(){
+    //   window.location="index.php";
+    // }
+    </script>
+    
+
+</body>
+</html>

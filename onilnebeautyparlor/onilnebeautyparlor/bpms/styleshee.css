@@ -1,0 +1,141 @@
+body {
+	display: flex;
+	justify-content:flex-start;
+	align-items: left;
+	height: 100vh;
+	flex-direction: column;
+    margin: 0px;
+    background: linear-gradient(to right,rgba(85, 4, 117, 0.546)10%,rgb(65, 4, 77)90%);
+	background-position: center;
+    background-size: cover;
+	padding:70px;
+    overflow: hidden;
+}
+*{
+	font-family: sans-serif;
+	box-sizing: border-box;
+	margin:0%;
+	padding:0%;
+}
+#box1{
+    width:780px;
+    height: 570px;
+    background-image:url('images/Myprojectbg.png');
+    background-size:cover;
+    background-position:center;
+    position: absolute;
+    /* bottom:-1px; */
+    left:30%;
+    animation: anim2 2s forwards ;
+}
+.button-box{
+    width: 150px;
+    height: 50px;
+    margin: 5px auto;
+    position: relative;
+    box-shadow: 0 0 20px #48035db1;
+    border-radius: 30px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 50px;
+}
+
+/*@keyframes anim{
+    from{
+        right:-100%;
+    }
+    to{
+        left:0%;
+    }
+} */
+@keyframes anim2{
+    from{
+        right:100%;
+        width:600px;
+    }
+    to{
+        right:0px;
+        left:40%;
+    } 
+} 
+form {
+	width: 380px;
+    /* height: 480px; */
+    position:relative;
+    margin: 0 0 0 50px auto;
+    background: rgba(255, 255, 255, 0.445);
+    box-shadow: 0 0 20px 9px rgb(255, 255, 255);
+    border-radius: 30px;
+    padding:20px;
+    overflow: hidden;
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+input {
+	/* display: block; */
+	border: 2px solid #ccc;
+	width: 95%;
+	padding: 10px;
+	margin: 10px auto;
+	border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #060202;
+    outline:none;
+    background:transparent;;
+}
+label {
+	color: #0f0a0a;
+	font-size: 18px;
+	padding: 10px;
+}
+
+button {
+	float: right;
+	background: linear-gradient(rgba(85, 4, 117, 0.546)10%,rgb(65, 4, 77)90%);
+	padding: 10px 15px;
+	color: #fcfffb;
+	border-radius: 5px;
+	margin-right: 10px;
+	border: none;
+}
+button:hover{
+	opacity: .7;
+}
+.error {
+   background: #F2DEDE;
+   color: #A94442;
+   padding: 10px;
+   width: 95%;
+   border-radius: 5px;
+   margin: 20px auto;
+}
+
+.success {
+   background: #D4EDDA;
+   color: #238189;
+   padding: 10px;
+   width: 95%;
+   border-radius: 5px;
+   margin: 20px auto;
+}
+
+h1 {
+	text-align: center;
+	color: #fff;
+}
+
+.ca {
+	font-size: 14px;
+	display: inline-block;
+	padding: 10px;
+	text-decoration: none;
+	color: #444;
+}
+.ca:hover {
+	text-decoration: underline;
+} 
