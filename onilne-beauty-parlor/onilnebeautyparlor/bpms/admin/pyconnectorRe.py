@@ -20,7 +20,7 @@ emails = [email[0] for email in mycursor.fetchall()]
 # Compose the email message
 msg = MIMEMultipart()
 msg['Subject'] = 'BB Appointment Confirmation'
-msg['From'] = 'Beauty Blush <layaofficial412@gmail.com>'
+msg['From'] = 'Beauty Blush <senderemail@gmail.com>'
 msg['To'] = sys.argv[1]
 body = 'Dear emailCustomer appointment request has been rejected '
 msg.attach(MIMEText(body, 'plain'))
@@ -28,8 +28,8 @@ msg.attach(MIMEText(body, 'plain'))
 # Send the email using an SMTP server
 smtp_server = 'smtp.elasticemail.com'
 smtp_port = 2525
-smtp_username = 'layaofficial412@gmail.com'
-smtp_password = '129E751B3D4916526273DF3F1587DEB9899C'
+smtp_username = 'yourelasticemail@gmail.com'
+smtp_password = 'your elastic email password'
 
 with smtplib.SMTP(smtp_server, smtp_port) as server:
     server.starttls()
