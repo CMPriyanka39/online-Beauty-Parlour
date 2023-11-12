@@ -1,32 +1,3 @@
-'''import smtplib
-#SERVER = "localhost"
-
-FROM = 'layaofficial412@gmail.com'
-
-TO = ["kokkullaya@gmail.com"] # must be a list
-
-SUBJECT = "Hello!"
-
-TEXT = "This message was sent with Python's smtplib."
-
-# Prepare actual message
-
-message = """\
-From: %s
-To: %s
-Subject: %s
-
-%s
-""" % (FROM, ", ".join(TO), SUBJECT, TEXT)
-
-# Send the mail
-
-server = smtplib.SMTP('smtp.elasticemail.com')
-server.sendmail(FROM, TO, message)
-server.quit()
-
-
-'''
 import smtplib
 from email.mime.text import MIMEText
 import sys
@@ -52,8 +23,8 @@ appointment = cursor.fetchone()
 
 smtp_server = 'smtp.elasticemail.com'
 smtp_port = 2525
-smtp_username = 'layaofficial412@gmail.com'
-smtp_password = '129E751B3D4916526273DF3F1587DEB9899C'
+smtp_username = 'yourelasticemail@gmail.com'
+smtp_password = 'your elastic email password'
 
 # Create a secure SSL/TLS connection to the SMTP server
 smtp_conn = smtplib.SMTP(smtp_server, smtp_port)
@@ -61,7 +32,7 @@ smtp_conn.starttls()
 
 # Log in to your email account
 smtp_conn.login(smtp_username, smtp_password)
-from_email = 'layaofficial412@gmail.com'
+from_email = 'senderemail@gmail.com'
 #bodyad="New appointment number is",sys.argv[3]," on Time:",sys.argv[4]," Plz confirm the appointment"
 to_email =sys.argv[1]
 subject ="Appointment Confirmation"
