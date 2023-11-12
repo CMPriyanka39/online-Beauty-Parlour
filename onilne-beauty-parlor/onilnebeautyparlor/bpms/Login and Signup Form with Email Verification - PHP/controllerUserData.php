@@ -38,18 +38,18 @@ if(isset($_POST['signup'])){
         $data_check = mysqli_query($con, $insert_data);
         if($data_check){
                         $mail = new PHPMailer();
-
+//create elastic email account to use the facility 
             // Set the SMTP settings for Elastic Email
             $mail->isSMTP();
             $mail->Host = 'smtp.elasticemail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'layaofficial412@gmail.com';
-            $mail->Password = '129E751B3D4916526273DF3F1587DEB9899C';
+            $mail->Username = "yourelasticemail@gmail.com;
+            $mail->Password = 'Your elastic email password';
             $mail->SMTPSecure = 'tls';
             $mail->Port = 2525;
 
             // Set the sender and recipient email addresses
-            $mail->setFrom('layaofficial412@gmail.com', 'Beauty Blush');
+            $mail->setFrom('sender@gmail.com', 'Beauty Blush');
             $mail->addAddress($email, $name);
 
             // Set the email subject and body
@@ -152,13 +152,13 @@ if(isset($_POST['signup'])){
                 $mail->isSMTP();
                 $mail->Host = 'smtp.elasticemail.com';
                 $mail->SMTPAuth = true;
-                $mail->Username = 'layaofficial412@gmail.com';
-                $mail->Password = '129E751B3D4916526273DF3F1587DEB9899C';
+                $mail->Username = 'yourelasticemail@gmail.com';
+                $mail->Password = 'yourelasticemail password';
                 $mail->SMTPSecure = 'tls';
                 $mail->Port = 2525;
 
                 // Set the sender and recipient email addresses
-                $mail->setFrom('layaofficial412@gmail.com', 'Beauty Blush');
+                $mail->setFrom('sender@gmail.com', 'Beauty Blush');
                 $mail->addAddress($email, $name);
 
                 // Set the email subject and body
@@ -180,7 +180,7 @@ if(isset($_POST['signup'])){
 
                 // $subject = "Password Reset Code";
                 // $message = "Your password reset code is $code";
-                // $sender = "From: layaofficial412@gmail.com";
+                // $sender = "From:senderemail@gmail.com";
                 // if(mail($email, $subject, $message, $sender)){
                     $info = "We've sent a passwrod reset otp to your email - $email";
                     $_SESSION['info'] = $info;
